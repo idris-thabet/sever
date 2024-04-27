@@ -8,6 +8,8 @@ const getVacRequest = require("./api/getVacationRequest");
 const updateVacationRequest = require("./api/updateVacationRequest"); 
 const getResponse = require("./api/getVacResponse"); 
 
+const deleVacationData = require("./api/deleteVacationData"); 
+
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -22,6 +24,8 @@ app.post("/api/v1/vacationRequest", vacRequest);
 app.get("/api/v1/getVacationRequest", getVacRequest);
 app.post("/api/v1/updateVacationRequest", updateVacationRequest); 
 
+app.delete("/api/v1/deleteVacationData", deleVacationData); 
+
 
 app.get("/api/v1/getVacResponse", getResponse); 
 
@@ -32,13 +36,13 @@ app.listen(port, () => {
 
 
 
-    const jwt = require('jsonwebtoken');
+//     const jwt = require('jsonwebtoken');
 
 
-const adminToken = jwt.sign({ email: 'admin@example.com', isAdmin: true }, 'idristhabet');
-const userToken = jwt.sign({ email: 'user@example.com', isAdmin: false }, 'idristhabet');
+// const adminToken = jwt.sign({ email: 'admin@example.com', isAdmin: true }, 'idristhabet');
+// const userToken = jwt.sign({ email: 'user@example.com', isAdmin: false }, 'idristhabet');
 
-console.log("token admin :", adminToken);
-console.log("user token:", userToken);
+// console.log("token admin :", adminToken);
+// console.log("user token:", userToken);
 
 });

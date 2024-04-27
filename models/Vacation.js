@@ -5,6 +5,10 @@ const vacationSchema = new mongoose.Schema({
     type: Date,
     required: true,
   },
+  end: {
+    type: Date,
+    required: true,
+  },
   username: {
     type: String,
     required: true,
